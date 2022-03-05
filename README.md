@@ -44,20 +44,20 @@ This section will show how to display the exact steps taken by the parser, or tr
 ### Parser steps details
 
 Open the makefile found in the bin and modify the line 12 as follows to add "-D TRACE"
-    ```sh
+   ```sh
    CCFLAGS = -ansi -pedantic -std=c++11 -I $(SOURCE) -D TRACE
    ```
 
 ### Trace of heap usage
 
 Open the makefile found in the bin and modify the line 12 as follows to add "-D MAP"
-    ```sh
+   ```sh
    CCFLAGS = -ansi -pedantic -std=c++11 -I $(SOURCE) -D MAP
    ```
 
 ### Both details
 
 Open the makefile found in the bin and modify the line 12 as follows to add "-D MAP"
-    ```sh
+   ```sh
    CCFLAGS = -ansi -pedantic -std=c++11 -I $(SOURCE) -D TRACE -D MAP
    ```
