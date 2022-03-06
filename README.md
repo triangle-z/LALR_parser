@@ -57,7 +57,7 @@ Open the makefile found in the bin and modify the line 12 as follows to add "-D 
 
 ### Both details
 
-Open the makefile found in the bin and modify the line 12 as follows to add "-D MAP"
+Open the makefile found in the bin and modify the line 12 as follows to add "-D TRACE -D MAP"
    ```sh
    CCFLAGS = -ansi -pedantic -std=c++11 -I $(SOURCE) -D TRACE -D MAP
    ```
