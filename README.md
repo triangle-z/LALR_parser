@@ -37,7 +37,7 @@ The expression must have that form :
    ```
 
 <!-- TO GO FURTHER -->
-## To go FURTHER
+## To go further
 
 This section will show how to display the exact steps taken by the parser, or trace the objects constructed and destroyed.
 
