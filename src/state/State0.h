@@ -38,6 +38,13 @@ public:
     State0();
     ~State0();
 
+//---------------------------------------------------------------- PRIVATE
+
+protected:
+//------------------------------------------------------ Protected methods
+
+    void displayExpectedResults() const ;
+
 };
 
 #endif // STATE_0

@@ -52,7 +52,7 @@ bool State8::transition(Automaton* automaton, Symbole* s)
         automaton->reduction(3);
         break;
       default:
-        displayError(s);
+        handleError(automaton, s);
         return false;
     }
     
@@ -73,3 +73,11 @@ State8::~State8() {
 #endif
 } //----- End of ~State8
 
+//---------------------------------------------------------------- PRIVATE
+
+//------------------------------------------------------ Protected methods
+
+void State8::displayExpectedResults() const
+{
+  cout << "Expected symbols : '+', '*', ')' or EOF" << endl ; 
+}

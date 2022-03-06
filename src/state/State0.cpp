@@ -46,7 +46,7 @@ bool State0::transition(Automaton* automaton, Symbole* s)
         automaton->offset(s, new State1(), false);
         break;
       default:
-        displayError(s);
+        handleError(automaton, s);
         return false;
     }
     
@@ -66,3 +66,12 @@ State0::~State0() {
     cout << "Appel au destructeur de <State0>" << endl;
 #endif
 } //----- End of ~State0
+
+//---------------------------------------------------------------- PRIVATE
+
+//------------------------------------------------------ Protected methods
+
+void State0::displayExpectedResults() const
+{
+  cout << "Expected symbols : integer or '('" << endl ; 
+}

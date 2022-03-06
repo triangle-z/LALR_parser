@@ -74,3 +74,14 @@ void Lexer::Ajouter(Symbole* symbole) {
    flux = flux.insert(6,toAdd);
 }
 
+void Lexer::Afficher() {
+   for(int i = 0 ; i < flux.size() ; i++){
+      cout << flux[i] ;
+   }
+   cout << endl ;
+
+   for(int i = 0 ; i < tete-1 ; i++){
+      cout << "~" ;
+   }
+   cout << "^" << endl ;
+}

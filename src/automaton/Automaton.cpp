@@ -78,6 +78,11 @@ void Automaton::endAlgorithm() const
   cout << "Expression value : " << symbolsStack[0]->getValue() << endl ;
 }
 
+void Automaton::handleError() const
+{
+  lexer->Afficher() ;
+}
+
 //---------------------------------------------- Constructors - destructor
 
 Automaton::Automaton(string expression)

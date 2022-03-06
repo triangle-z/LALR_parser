@@ -52,7 +52,7 @@ bool State3::transition(Automaton* automaton, Symbole* s)
         automaton->reduction(1);
         break;
       default:
-        displayError(s);
+        handleError(automaton, s);
         return false;
     }
     
@@ -72,3 +72,12 @@ State3::~State3() {
     cout << "Appel au destructeur de <State3>" << endl;
 #endif
 } //----- End of ~State3
+
+//---------------------------------------------------------------- PRIVATE
+
+//------------------------------------------------------ Protected methods
+
+void State3::displayExpectedResults() const
+{
+  cout << "Expected symbols : '+', '*', ')' or EOF" << endl ; 
+}

@@ -61,9 +61,15 @@ protected:
     // Manual :
     // Displays the name of this state
 
-    void displayError(Symbole* s) const ;
+    void handleError(Automaton * a, Symbole* s) const ;
     // Manual :
-    // Displays that there is an error and the symbol that caused it
+    // Displays that there is an error and the symbol that caused it, and
+    // calls the error handler in the automaton for more details
+
+    virtual void displayExpectedResults() const = 0 ;
+    // Manual :
+    // Virtual method that will be redefined in every state. It will
+    // display all the symbols expected in a State.
 
 //--------------------------------------------------- Protected attributes
     string name;

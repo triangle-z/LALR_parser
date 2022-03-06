@@ -47,7 +47,7 @@ bool State1::transition(Automaton* automaton, Symbole* s)
         return false ;
         break;
       default:
-        displayError(s);
+        handleError(automaton, s);
         return false;
     }
     
@@ -67,3 +67,12 @@ State1::~State1() {
     cout << "Appel au destructeur de <State1>" << endl;
 #endif
 } //----- End of ~State1
+
+//---------------------------------------------------------------- PRIVATE
+
+//------------------------------------------------------ Protected methods
+
+void State1::displayExpectedResults() const
+{
+  cout << "Expected symbols : '+', '*' or EOF" << endl ; 
+}

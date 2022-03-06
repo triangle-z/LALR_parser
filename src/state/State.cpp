@@ -16,6 +16,7 @@ using namespace std;
 
 //------------------------------------------------------- Personal include
 #include "State.h"
+#include "automaton/Automaton.h"
 
 //----------------------------------------------------------------- PUBLIC
 
@@ -38,12 +39,15 @@ State::~State() {
 
 //------------------------------------------------------ Protected methods
 
-void State::displayError(Symbole* s) const
+void State::handleError(Automaton * a, Symbole* s) const
 {
-    cout << "Error in state " << name << ", tried to read " ;
+    cout << endl << "Error in state " << name << ", tried to read " ;
     s->Affiche() ;
+    cout << endl << endl ;
+    a->handleError() ;
     cout << endl ;
-} //----- End of displayError
+    displayExpectedResults() ;
+} //----- End of handleError
 
 void State::displayState() const
 {

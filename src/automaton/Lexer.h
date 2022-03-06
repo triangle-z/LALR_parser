@@ -13,6 +13,7 @@ class Lexer {
       Symbole * Consulter();
       void Avancer();
       void Ajouter(Symbole* symbole) ;
+      void Afficher() ;
 
    protected:
       string flux;

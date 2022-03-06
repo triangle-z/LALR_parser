@@ -67,6 +67,14 @@ public:
     // The algorithm must have ended before and the expression value must
     // be the first (preferably only) of the symbolstack
 
+    void handleError() const ;
+    // Manual :
+    // Displays the the part of the expression where the error occured
+    //
+    // Contract :
+    // The algorithm must have encountered an error for the method to be
+    // called
+
 //---------------------------------------------- Constructors - destructor
     Automaton(string expression) ;
     // Manual :
