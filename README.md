@@ -1,5 +1,6 @@
 # LALR_parser
-LALR parser that can compute expresions containing parenthesis, additions and soustractions
+
+LALR parser that can compute expresions containing parenthesis, additions and soustractions. If the expression contains an error, the parser will tell us where it is, and if it's a missing closing parenthesis, it will be added at the end of the expression.
 
 <!-- About this project -->
 ## About this project

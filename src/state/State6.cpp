@@ -45,6 +45,13 @@ bool State6::transition(Automaton* automaton, Symbole* s)
         #endif
         automaton->offset(s, new State9());
         break;
+      case FIN:
+        cout << endl << ">>> Erreur, parenthese non fermee a la fin, automatiquement rajoutee" << endl ;
+        #ifdef TRACE
+          displayAction("CLOSEPAR","offset","State 9");
+        #endif
+        automaton->offset(s, new State9());
+        break;
       default:
         handleError(automaton, s);
         return false;

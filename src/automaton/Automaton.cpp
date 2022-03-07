@@ -75,7 +75,7 @@ void Automaton::reduction(int n)
 
 void Automaton::endAlgorithm() const
 {
-  cout << "Expression value : " << symbolsStack[0]->getValue() << endl ;
+  cout << endl << "Expression value : " << symbolsStack[0]->getValue() << endl ;
 }
 
 void Automaton::handleError() const
